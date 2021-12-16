@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#container {
+  width: 80%;
+  margin: auto;
+}
+
+/*------------ navigation css is here -----------------*/
+#header {
+  border: 2px solid rgb(151, 150, 150);
+  border-left: none;
+  border-right: none;
+}
+
+#navigation_bar {
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.float1 {
+  float: left;
+  width: 50%;
+}
+
+.float2 {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+
+.navi_child {
+  width: 100%;
+  display: flex;
+}
+
+.img {
+  box-sizing: border-box;
+  width: 70%;
+}
+.navi_child_child {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.navi_child_child_right {
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 10px;
+}
+.app {
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navi_child_child_right:hover {
+  background-color: rgb(238, 230, 230);
+}
+
+.inp {
+  border: 1px solid black;
+  border-left: none;
+  border-radius: 0px 20px 20px 0px;
+  height: 100%;
+  width: 100%;
+}
+
+/* -----------------------------body css  started---------------------------- */
+
+#af_navigation {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 1%;
+}
+.af_child {
+  box-sizing: border-box;
+  border: 1px solid rgb(41, 40, 40);
+  width: 16%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  padding: 1%;
+  padding-bottom: 2.5%;
+  border-radius: 15px;
+  height: 20%;
+}
+.af_child:hover {
+  background-color: black;
+  color: white;
+}
+.af_child > a {
+  text-decoration: none;
+  color: black;
+}
+.af_child > a:hover {
+  color: white;
+}
+
+.af_ch_lt {
+  float: left;
+}
+.af_ch_lt:hover {
+  color: white;
+}
+.af_ch_rt {
+  float: right;
+}
+
+/* --------------------------css of city------------------ */
+
+#city {
+  background-color: rgb(224, 221, 221);
+  margin-top: 30px;
+  font-family: Arial, sans-serif;
+}
+
+#c_child {
+  width: 80%;
+  margin: auto;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+#c_child > div {
+  margin-top: 1%;
+}
+#c_child > div > p,
+h3 {
+  margin-top: 1%;
+}
+#city_img {
+  display: flex;
+  box-sizing: border-box;
+}
+#city_img > a {
+  text-decoration: inherit;
+  color: inherit;
+  width: 19%;
+  margin: auto;
+}
+
+#city_img > a > div > img {
+  width: 100%;
+}
+
+/* -------------------css for lucknow--------------------------- */
+
+#lucknow {
+  width: 80%;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  font-family: Arial, sans-serif;
+}
+#lucknow div,
+h3,
+p {
+  margin-top: 1%;
+  box-sizing: border-box;
+}
+#l_child {
+  display: flex;
+  box-sizing: border-box;
+}
+#l_child > a {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  text-decoration: inherit;
+  color: inherit;
+  width: 24%;
+  margin: auto;
+}
+#l_child > a img {
+  width: 100%;
+}
+
+.a_img {
+  margin-top: 10px;
+}
+
+/* ----------------------css of footers---------------------- */
+
+#footer {
+  background-color: rgb(212, 194, 194);
+}
+#f_child {
+  width: 80%;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  font-family: Arial, sans-serif;
+}
+#f_child > div {
+  display: flex;
+}
+
+.f_c_add {
+  margin-left: 20px;
+}
+.f_c_add > a {
+  font-family: Arial, sans-serif;
+  text-decoration: inherit;
+  color: inherit;
+  font-weight: 600;
+}
+.f_c_add > a:hover {
+  text-decoration: underline;
+}
+.f_c_add h5 {
+  margin-top: 10px;
+}
