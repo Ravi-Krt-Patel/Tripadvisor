@@ -222,3 +222,160 @@ p {
 .f_c_add h5 {
   margin-top: 10px;
 }
+
+/*-------------------------------- product css ----------------------------------------*/
+
+#menu {
+  border: 1px solid grey;
+}
+#menu_child {
+  width: 80%;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+#menu_child > a {
+  text-decoration: inherit;
+  color: inherit;
+  margin-right: 20px;
+}
+
+#product {
+  width: 90%;
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: Arial, sans-serif;
+}
+#product_child {
+  display: flex;
+}
+#side_bar {
+  font-family: Arial, sans-serif;
+  width: 25%;
+  border: 1px solid rgb(107, 99, 221);
+  padding: 20px;
+}
+
+#side_body {
+  width: 73%;
+  margin-left: 10px;
+  border: 1px solid rgb(133, 128, 204);
+}
+
+.side_l {
+  float: left;
+}
+.side_r {
+  float: right;
+}
+.side_clear {
+  clear: both;
+}
+
+.product_d_flex {
+  display: flex;
+}
+.product_d_flex > p {
+  margin: 5px;
+}
+
+.all_c_p_l {
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.div_big {
+  width: 60%;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  display: flex;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.div_big > div {
+  width: 32%;
+  margin-left: 10px;
+}
+.img_div {
+  margin: auto;
+  width: 40%;
+  box-sizing: border-box;
+}
+.img_div_img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+}
+.final_div {
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  margin-top: 10px;
+}
+/* .final_div:hover {
+  border: 3px solid rgba(179, 175, 175, 0.5);
+} */
+
+.name_button {
+  font-weight: 900;
+  width: 80%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: yellow;
+  border-radius: 15px;
+}
+.name_button:hover {
+  background-color: rgb(241, 241, 168);
+}
+.name_section > h3 {
+  margin-bottom: 10px;
+}
+
+.name_section > button {
+  margin-top: 40%;
+}
+
+/* product_final.html */
+
+#final_product {
+  width: 80%;
+  margin: auto;
+}
+
+.f_p_header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.f_p_flot_l {
+  float: left;
+}
+.f_p_flot_l > a > button {
+  width: 300px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: yellow;
+  font-weight: 900;
+  margin-top: 50%;
+  margin-bottom: 5%;
+}
+.f_p_flot_r {
+  float: right;
+}
+.clear_both {
+  clear: both;
+}
+
+.p_c {
+  margin-top: 30%;
+}
+.p_c > div {
+  margin-right: 30%;
+  font-weight: 900;
+}
