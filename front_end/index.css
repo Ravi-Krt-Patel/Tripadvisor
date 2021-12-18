@@ -77,6 +77,12 @@
   width: 100%;
 }
 
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
 /* -----------------------------body css  started---------------------------- */
 
 #af_navigation {
@@ -142,16 +148,31 @@ h3 {
 #city_img {
   display: flex;
   box-sizing: border-box;
+  overflow: hidden;
 }
 #city_img > a {
+  box-sizing: border-box;
   text-decoration: inherit;
   color: inherit;
   width: 19%;
   margin: auto;
+  /* box-shadow: inset 10px 10px #000000; */
+  /* box-shadow: 10px 5px 5px rgb(214, 198, 198); */
 }
 
 #city_img > a > div > img {
+  box-sizing: border-box;
   width: 100%;
+}
+
+.newyork {
+  position: relative;
+  margin-top: -40px;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 900;
+  text-shadow: 10px 10px 20px rgb(19, 18, 18);
 }
 
 /* -------------------css for lucknow--------------------------- */
