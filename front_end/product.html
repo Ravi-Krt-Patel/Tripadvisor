@@ -123,19 +123,19 @@
                     <div style="margin-bottom: 20px; margin-top: 20px;">
                         <h3 style="margin-bottom: 10px;">Price</h3>
                         <div style="margin-bottom: 10px;">
-                            <input type="checkbox"/>
+                            <input id="ten_th" type="checkbox"/>
                             <label>&#8377 10,000 - &#8377 20,000</label>
                         </div>
                         <div style="margin-bottom: 10px;">
-                            <input type="checkbox"/>
+                            <input id="twenty_th" type="checkbox"/>
                             <label>&#8377 20,000 - &#8377 30,000</label>
                         </div>
                         <div style="margin-bottom: 10px;">
-                            <input type="checkbox"/>
+                            <input id="thirty_th" type="checkbox"/>
                             <label>&#8377 30,000 - &#8377 40,000</label>
                         </div>
                         <div style="margin-bottom: 10px;">
-                            <input type="checkbox"/>
+                            <input id="fourty_th" type="checkbox"/>
                             <label>&#8377 40,000 - more</label>
                         </div>
                     </div>
@@ -172,7 +172,7 @@
                     <div style="margin-bottom: 20px; margin-top: 20px;">
                         <h3 style="margin-bottom: 10px;">Amenities</h3>
                         <div style="margin-bottom: 10px;" class="side_l">
-                            <input type="checkbox"/>
+                            <input id = "free_wifi" type="checkbox"/>
                             <label>Free Wifi</label>
                         </div>
                         <div class="side_r">
@@ -188,7 +188,7 @@
                         </div>
                         <div class="side_clear"></div>
                         <div style="margin-bottom: 10px;" class="side_l">
-                            <input type="checkbox"/>
+                            <input id= "pool" type="checkbox"/>
                             <label>Pool</label>
                         </div>
                         <div class="side_r">
@@ -196,7 +196,7 @@
                         </div>
                         <div class="side_clear"></div>
                         <div style="margin-bottom: 10px;" class="side_l">
-                            <input type="checkbox"/>
+                            <input id ="restaurant" type="checkbox"/>
                             <label>Restaurant</label>
                         </div>
                         <div class="side_r">
@@ -243,7 +243,150 @@
     <script>
         async function full_data(){
             let res = await fetch("http://localhost:2345/product");
-            let data = await res.json();
+            var data = await res.json();
+            var f_data = []
+            if(JSON.parse(localStorage.getItem("ten_th")) != null){
+                data.filter((el)=>{
+                    let aa = el.product_price;
+                    let ff = "";
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] != ","){
+                            ff += aa[i];
+                        }
+                    }
+                    if(Number(ff) >= 10000 && Number(ff) <= 20000){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+
+
+            if(JSON.parse(localStorage.getItem("twenty_th")) != null){
+                data.filter((el)=>{
+                    let aa = el.product_price;
+                    let ff = "";
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] != ","){
+                            ff += aa[i];
+                        }
+                    }
+                    if(Number(ff) >= 20000 && Number(ff) <= 30000){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+
+            if(JSON.parse(localStorage.getItem("thirty_th")) != null){
+                data.filter((el)=>{
+                    let aa = el.product_price;
+                    let ff = "";
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] != ","){
+                            ff += aa[i];
+                        }
+                    }
+                    if(Number(ff) >= 30000 && Number(ff) <= 40000){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+
+            if(JSON.parse(localStorage.getItem("fourty_th")) != null){
+                data.filter((el)=>{
+                    let aa = el.product_price;
+                    let ff = "";
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] != ","){
+                            ff += aa[i];
+                        }
+                    }
+                    if(Number(ff) >= 40000 && Number(ff) <= 60000){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+            console.log(data)
+            
+            if(JSON.parse(localStorage.getItem("free_wifi")) != null){
+
+                data.filter((el)=>{
+                    let aa = el.facility;
+                    let ff = false;
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] == "Free wifi"){
+                            ff = true;
+                        }
+                    }
+                    if(ff == true){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+           
+
+            if(JSON.parse(localStorage.getItem("pool")) != null){
+
+                data.filter((el)=>{
+                    let aa = el.facility;
+                    let ff = false;
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] == "pool"){
+                            ff = true;
+                        }
+                    }
+                    if(ff == true){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+
+            if(JSON.parse(localStorage.getItem("restaurant")) != null){
+
+                data.filter((el)=>{
+                    let aa = el.facility;
+                    let ff = false;
+                    for(var i=0; i<aa.length; i++){
+                        if(aa[i] == "Restaurant"){
+                            ff = true;
+                        }
+                    }
+                    if(ff == true){
+                        f_data.push(el)
+                        
+                    }
+                    
+                })
+                
+                data = f_data;
+            }
+
+           
+
+
             let product = document.getElementById("side_body");
             data.forEach((el)=>{
                 let div_big = document.createElement("div");
@@ -398,6 +541,99 @@
             let cart_data = JSON.stringify(p);
             localStorage.setItem("tripadvisor",cart_data);
         }
+
+
+
+
+
+
+
+
+        let ten_th = document.getElementById("ten_th");
+            function f_ten_th(){
+                let ss = "something";
+                if(JSON.parse(localStorage.getItem("ten_th")) != null){
+                    localStorage.removeItem("ten_th");
+                }else{
+                    localStorage.setItem("ten_th",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+            }
+        ten_th.addEventListener("click",f_ten_th);
+
+        let twenty_th = document.getElementById("twenty_th");
+            function f_twenty_th(){
+                let ss = "something";
+                if(JSON.parse(localStorage.getItem("twenty_th")) != null){
+                    localStorage.removeItem("twenty_th");
+                }else{
+                    localStorage.setItem("twenty_th",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+            }
+        twenty_th.addEventListener("click",f_twenty_th);
+
+        let thirty_th = document.getElementById("thirty_th");
+            function f_thirty_th(){
+                let ss = "something";
+                if(JSON.parse(localStorage.getItem("thirty_th")) != null){
+                    localStorage.removeItem("thirty_th");
+                }else{
+                    localStorage.setItem("thirty_th",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+            }
+        thirty_th.addEventListener("click",f_thirty_th);
+
+        let fourty_th = document.getElementById("fourty_th");
+            function f_fourty_th(){
+                let ss = "something";
+                if(JSON.parse(localStorage.getItem("fourty_th")) != null){
+                    localStorage.removeItem("fourty_th");
+                }else{
+                    localStorage.setItem("fourty_th",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+            }
+        fourty_th.addEventListener("click",f_fourty_th);
+
+        let free_wifi = document.getElementById("free_wifi");
+        function f_free_wifi(){
+            let ss = "something";
+                if(JSON.parse(localStorage.getItem("free_wifi")) != null){
+                    localStorage.removeItem("free_wifi");
+                }else{
+                    localStorage.setItem("free_wifi",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+        }
+        free_wifi.addEventListener("click",f_free_wifi);
+
+        let pool = document.getElementById("pool");
+        function f_pool(){
+            let ss = "something";
+                if(JSON.parse(localStorage.getItem("pool")) != null){
+                    localStorage.removeItem("pool");
+                }else{
+                    localStorage.setItem("pool",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+        }
+        free_wifi.addEventListener("click",f_pool);
+
+        let restaurant = document.getElementById("restaurant");
+        function f_restaurant(){
+            let ss = "something";
+                if(JSON.parse(localStorage.getItem("restaurant")) != null){
+                    localStorage.removeItem("restaurant");
+                }else{
+                    localStorage.setItem("restaurant",JSON.stringify(ss));
+                }
+                window.location.reload(true);
+        }
+        free_wifi.addEventListener("click",f_restaurant);
+
+
 
     </script>
     
