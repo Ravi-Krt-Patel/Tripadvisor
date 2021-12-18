@@ -362,7 +362,7 @@ p {
   margin-top: 40%;
 }
 
-/* product_final.html */
+/* ----------------------product_final.html-------------------------- */
 
 #final_product {
   width: 80%;
@@ -399,4 +399,51 @@ p {
 .p_c > div {
   margin-right: 30%;
   font-weight: 900;
+}
+
+/* -------------------------destination------------------------------------------- */
+
+#destination {
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#d_child {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+#d_child > div {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  width: 24%;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
+  padding-top: 220px;
+  text-shadow: 10px 10px 10px black;
+}
+
+#last {
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/dc/6d/64/cinderella-s-castle-at.jpg?w=300&h=300&s=1");
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  width: 85%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 500px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  padding-top: 400px;
 }
